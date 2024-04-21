@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "5ec386b8-0b14-455a-9dd5-d8fb640a320b",
+		"name": "mostra tempo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28448717"
+	},
+	"item": [
+		{
+			"name": "usuario",
+			"item": [
+				{
+					"name": "criar usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"pedro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/usuarios/criar",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"usuarios",
+								"criar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "favoritar cidade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/usuarios/1/favoritar/5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"usuarios",
+								"1",
+								"favoritar",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar cidades favoritas por usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/usuarios/1/cidades-favoritas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"usuarios",
+								"1",
+								"cidades-favoritas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consulta Tempo",
+			"item": [
+				{
+					"name": "consultar tempo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeCidade\": \"criciuma\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/consultas-tempo/consultar",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"consultas-tempo",
+								"consultar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar consultas por usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/consultas-tempo/usuario/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"consultas-tempo",
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultar tempo de cidades favoritas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/consultas-tempo/consultar-favoritos-por-usuario/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"consultas-tempo",
+								"consultar-favoritos-por-usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cidade",
+			"item": [
+				{
+					"name": "buscar cidades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/cidades",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"cidades"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ajuda",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/ajuda",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"ajuda"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
